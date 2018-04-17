@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhangqie.bluetooth">
+
+    <!--需要此权限来执行任何蓝牙通信，如请求一个连接、接受一个连接和传输数据。-->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+   <!-- //如果你想让你的应用启动设备发现或操纵蓝牙设置，必须申报bluetooth_admin许可-->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".demo1.Demo1Activity"/>
+        <activity android:name=".demo2.Demo2Activity"/>
+    </application>
+
+
+
+
+</manifest>
